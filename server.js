@@ -1,0 +1,19 @@
+const express = require('express')
+const app = express()
+const port = 3001
+const todos = require("./src/todos.json");
+
+app.use((req, res, next) => {
+    res.append('Access-Control-Allow-Origin', ['*']);
+    res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.append('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+});
+
+app.get('/', (req, res) => {
+	res.send(todos);
+})
+
+app.listen(port, () => {
+	console.log(`Example app listening on port ${port}`)
+})

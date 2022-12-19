@@ -7,7 +7,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input {
+  padding: 5px;
+  width: 100%;
+}
+
+.counter {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  width: 100%;
+}
+
+.todo {
+  position: relative;
+  margin-bottom: 10px;
+  width: 300px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.todo button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.todos-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-controls {
+  width: 220px;
 }
